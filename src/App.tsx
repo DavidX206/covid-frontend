@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:5000/data')
+    axios.get('/.netlify/functions/data')
       .then(res => {
         setData(res.data);
       })
