@@ -5,7 +5,7 @@ import './App.css'
 import axios from 'axios'
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null);
 
   useEffect(() => {
     axios.get('/.netlify/functions/data')
@@ -35,9 +35,6 @@ function App() {
     } catch (e) {
       console.error("Error adding document: ", e);
     }
-  }
-  const names = {
-    name: 'david'
   }
   return (
     <>
