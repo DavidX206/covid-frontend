@@ -8,7 +8,7 @@ function App() {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    axios.get('/.netlify/functions/data')
+    axios.get('https://dryleaves.pythonanywhere.com/data')
       .then(res => {
         setData(res.data);
       })
